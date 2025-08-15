@@ -21,7 +21,7 @@ const HeadCoach = () => {
             <div className="absolute -top-8 left-1/2 transform -translate-x-1/2 w-20 h-20 bg-[#ef7141] text-white font-bold text-xl rounded-full flex items-center justify-center">
               AS
             </div>
-            <div className="mt-12 text-center md:text-left">
+            <div className="mt-12 text-center md:text-left overflow-y-auto max-h-72"> {/* Added overflow and max-height */}
               <p className="italic font-semibold text-lg mb-6">
                 "My passion and mission is to empower people to truly expect more of themselves in every way possible. If people leave my facility better than they entered in any way, I am a happy man."
               </p>
@@ -41,7 +41,7 @@ const HeadCoach = () => {
                 <FiTarget size={20} className="text-[#d94a00] mt-1" />
                 <div>
                   <h4 className="font-bold">Specialization</h4>
-                  <p>Strength and conditioning for sport, with expertise in powerlifting and OCR training</p>
+                  <p>Elite strength and conditioning for sport — from smashing powerlifting records to conquering obstacle course races (OCR).</p>
                 </div>
               </li>
               <li className="flex items-start gap-4">

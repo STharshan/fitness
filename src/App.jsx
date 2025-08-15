@@ -11,6 +11,8 @@ import WhyTrainWithAnthony from './components/WhyTrainWithAnthony';
 import PrivateFacility from './components/PrivateFacility';
 import Footer from './components/Footer';
 import TrainingPackages from './components/TrainingPackages';
+import ProvenTrackRecord from './components/ProvenTrackRecord';
+import Gallery from './components/Gallery';
 
 function App() {
 
@@ -23,7 +25,9 @@ function App() {
       <JoinCommunity />
       <TestimonialsWithCTA />
       <HeadCoach />
+      <ProvenTrackRecord />
       <TransformationSection />
+      <Gallery />
       <WhyTrainWithAnthony />
       <PrivateFacility />
       <TrainingPackages />

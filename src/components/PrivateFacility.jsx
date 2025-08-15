@@ -5,20 +5,18 @@ import { useState } from 'react';
 const PrivateFacility = () => {
   const slides = [
     {
-      image: '/1.png', // replace with actual image path
-      title: 'Functional Training',
-      description: 'Anthony demonstrating proper sled push technique on our dedicated turf area',
+      images: ['/t1.jpg', '/t2.jpg', ], // Each slide has 3 images
     },
     {
-      image: '/2.png',
-      title: 'Private Coaching Space',
-      description: 'Train without distraction in a coach-led private zone',
+      images: ['/t4.jpg', '/t5.jpg', ],
     },
     {
-      image: '/3.png',
-      title: 'Cutting-Edge Equipment',
-      description: 'Utilize professional-grade tools for serious performance',
+      images: ['/t7.jpg', '/t8.jpg',],
     },
+    {
+      images : ['t3.jpg','/t6.jpg']
+    },
+
   ];
 
   const [current, setCurrent] = useState(0);
@@ -34,7 +32,7 @@ const PrivateFacility = () => {
 
   return (
     <section className="bg-[#f9fafb] py-16 px-4">
-      <div className="max-w-6xl mx-auto text-center">
+      <div className="max-w-7xl mx-auto text-center">
         <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-2">
           Our Private Training Facility
         </h2>
@@ -43,22 +41,22 @@ const PrivateFacility = () => {
         </p>
 
         {/* Image Slider */}
-        <div className="relative w-full max-w-4xl mx-auto mb-10">
+        <div className="relative w-full max-w-7xl mx-auto mb-10">
           {slides.map((slide, index) => (
             <div
               key={index}
-              className={`${
-                index === current ? 'block' : 'hidden'
-              } transition-opacity duration-500 ease-in-out`}
+              className={`${index === current ? 'block' : 'hidden'
+                } transition-opacity duration-500 ease-in-out`}
             >
-              <img
-                src={slide.image}
-                alt={slide.title}
-                className="w-full h-[350px] object-cover rounded-md shadow-md"
-              />
-              <div className="absolute bottom-4 left-4 bg-black bg-opacity-60 text-white px-4 py-2 rounded-md text-left max-w-[80%]">
-                <p className="font-bold">{slide.title}</p>
-                <p className="text-sm">{slide.description}</p>
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 max-w-6xl mx-auto h-180">
+                {slide.images.map((image, imgIndex) => (
+                  <img
+                    key={imgIndex}
+                    src={image}
+                    alt={`Slide ${index + 1} - Image ${imgIndex + 1}`}
+                    className="object-cover rounded-md shadow-md"
+                  />
+                ))}
               </div>
             </div>
           ))}

@@ -3,12 +3,12 @@ import { FiCheck } from 'react-icons/fi';
 
 const PackageCard = ({ title, price, subtitle, features, highlight, buttonText }) => (
   <div className={`border rounded-lg p-6 shadow-sm ${highlight ? 'border-[#ef7141]' : 'border-gray-200'}`}>
-    {highlight && (
+    {/* {highlight && (
       <div className="bg-[#ef7141] text-white text-xs font-semibold px-3 py-1 rounded-t-md inline-block mb-2">
         RECOMMENDED
       </div>
-    )}
-    <h3 className="text-lg font-semibold mb-2">{title}</h3>
+    )} */}
+    <h3 className="text-xl font-semibold mb-2">{title}</h3>
     <p className="text-2xl font-bold text-[#ef7141]">{price}</p>
     <p className="text-sm text-gray-500 mb-4">{subtitle}</p>
     <ul className="text-sm text-gray-700 space-y-2 mb-4">
@@ -43,24 +43,8 @@ const TrainingPackages = () => {
 
       <div className="grid sm:grid-cols-2 gap-6 max-w-4xl mx-auto mb-20">
         <PackageCard
-          title="Standard"
-          price="£100"
-          subtitle="per month"
-          features={[
-            '2x 60 min sessions of coaching per week and access to our app.',
-            'Here you will have access to :',
-            'Meal plans',
-            'Full exercise programmes and workouts',
-            'Daily habits and action goals',
-            'Weekly progression check ins with your coach to ensure service',
-            'Constant access to your coach for support with any issues'
-          ]}
-          buttonText="Choose Standard"
-        />
-        <PackageCard
-          title="Premium"
-          price="£140"
-          subtitle="per month (£35/week)"
+          title="Group Premium"
+          price="£35 per week - £140 per month"
           features={[
             '3x 60 min sessions of coaching per week and access to our app.',
             'Here you will have access to :',
@@ -70,66 +54,22 @@ const TrainingPackages = () => {
             'Weekly progression check ins with your coach to ensure success',
             'Constant access to your coach for support with any issues'
           ]}
-          highlight
           buttonText="Choose Premium"
         />
-      </div>
-
-      {/* Section 2 – Personal + Remote Training */}
-      <h3 className="text-xl font-semibold mb-6">1-2-1 Personal Training</h3>
-      <p className="text-sm text-gray-500 max-w-2xl mx-auto mb-10">
-        Exclusive one-on-one coaching in our private facility with fully customized programs tailored to your specific needs and goals.
-      </p>
-
-      <div className="grid sm:grid-cols-2 gap-6 max-w-4xl mx-auto mb-20">
         <PackageCard
           title="Standard"
-          price="£199"
-          subtitle="per month"
+          price="£100 per month"
           features={[
-            '1 x 60min face-to-face session per week',
-            'Customized habit & accountability plans',
-            'Bespoke nutritional & meal plans',
-            'Fully individualized training program',
-            'Weekly progression check-ins',
-            'Constant coach support access'
+            '2x 60 min sessions of coaching per week and access to our app.',
+            'Here you will have access to :',
+            'Meal plans',
+            'Full exercise programmes and workouts',
+            'Daily habits and action goals',
+            'Weekly progression check ins with your coach to ensure service',
+            'Constant access to your coach for support with any issues'
           ]}
-          buttonText="Choose 1-2-1 Standard"
-        />
-        <PackageCard
-          title="Premium"
-          price="£360"
-          subtitle="per month"
-          features={[
-            '2 x 60min face-to-face sessions per week',
-            'Everything in Standard, plus:',
-            'Extra personalized support',
-            'Weekly progression check-ins',
-            'Constant coach support access'
-          ]}
-          buttonText="Choose 1-2-1 Premium"
-        />
-      </div>
-
-      <h3 className="text-xl font-semibold mb-6">Remote Training</h3>
-      <p className="text-sm text-gray-500 max-w-2xl mx-auto mb-10">
-        Get expert coaching and support from anywhere with our comprehensive remote training program.
-      </p>
-
-      <div className="max-w-md mx-auto mb-20">
-        <PackageCard
-          title="Remote Package"
-          price="£150"
-          subtitle="per month"
-          features={[
-            'Bespoke nutritional and meal plans',
-            'Customized fitness training plan',
-            'Personalized habit & accountability routine',
-            'Weekly assessments + feedback (Monday)',
-            'Weekly support check-in (Friday)',
-            'Monthly video call with your coach'
-          ]}
-          buttonText="Choose Remote Training"
+          highlight
+          buttonText="Choose Standard"
         />
       </div>
 
