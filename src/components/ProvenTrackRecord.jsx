@@ -1,7 +1,5 @@
 import React from "react";
 import { BiBullseye } from "react-icons/bi";
-// Importing React Icons
-import { FaDumbbell, FaMedal, FaRunning, FaFlagUsa, FaTrophy } from 'react-icons/fa';
 import { GoTrophy } from "react-icons/go";
 import { LuUsers } from "react-icons/lu";
 import { PiMedal } from "react-icons/pi";
@@ -30,7 +28,7 @@ const ProvenTrackRecord = () => {
         {
             id: 4,
             title: "Great Britain Representative",
-            description: "OCR European Championships, Portugal 2024",
+            description: "The Portugal European championships were  this year though 2025",
             icon: <LuUsers className="text-4xl text-orange-500" />,
         },
         {
