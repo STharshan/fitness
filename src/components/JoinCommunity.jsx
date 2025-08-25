@@ -1,7 +1,11 @@
 import React from 'react';
 import { FiPhoneCall } from 'react-icons/fi';
+import { useNavigate } from 'react-router-dom';
 
 const JoinCommunity = () => {
+
+   const navigate = useNavigate(); 
+
   return (
     <section className="py-16 px-4 bg-white">
       <div className="max-w-5xl mx-auto text-center">
@@ -26,8 +30,11 @@ const JoinCommunity = () => {
 
           {/* Button */}
           <div className="flex justify-center">
-            <button className="bg-white text-[#db4a00] font-semibold px-6 py-3 rounded-md flex items-center gap-2 shadow hover:opacity-90 transition">
+            <button className="bg-white text-[#db4a00] font-semibold px-6 py-3 rounded-md flex items-center gap-2 shadow hover:opacity-90 transition"
+              onClick={() => navigate('/contact')}
+            >
               <FiPhoneCall />
+              
               Book Your Free Session Now
             </button>
           </div>

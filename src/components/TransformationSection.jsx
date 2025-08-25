@@ -2,7 +2,7 @@ import React from 'react';
 
 const TransformationSection = () => {
   return (
-    <section className="bg-[#fff7f0] py-16 px-4">
+    <section className="bg-[#fff7f0] py-16 px-4 scroll-m-10" id='community'>
       <div className="max-w-5xl mx-auto text-center">
 
         {/* Header */}

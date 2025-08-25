@@ -1,39 +1,23 @@
 import React from 'react';
-import Navbar from './components/Navbar';
-import HeroSection from './components/HeroSection';
-import GroupTraining from './components/GroupTraining';
-import WhyChooseTraining from './components/WhyChooseTraining';
-import JoinCommunity from './components/JoinCommunity';
-import TestimonialsWithCTA from './components/TestimonialsWithCTA';
-import HeadCoach from './components/HeadCoach';
-import TransformationSection from './components/TransformationSection';
-import WhyTrainWithAnthony from './components/WhyTrainWithAnthony';
-import PrivateFacility from './components/PrivateFacility';
 import Footer from './components/Footer';
-import TrainingPackages from './components/TrainingPackages';
-import ProvenTrackRecord from './components/ProvenTrackRecord';
-import Gallery from './components/Gallery';
+import Navbar from './components/Navbar';
+import Home from './pages/Home';
+import Contact from './pages/Contact';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import ScrollToTop from './components/ScrollToTop';
 
 function App() {
-
   return (
-    <>
+    <Router>
+      <ScrollToTop />
       <Navbar />
-      <HeroSection />
-      <GroupTraining />
-      <WhyChooseTraining />
-      <JoinCommunity />
-      <TestimonialsWithCTA />
-      <HeadCoach />
-      <ProvenTrackRecord />
-      <TransformationSection />
-      <Gallery />
-      <WhyTrainWithAnthony />
-      <PrivateFacility />
-      <TrainingPackages />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/contact" element={<Contact />} />
+      </Routes>
       <Footer />
-    </>
-  )
+    </Router>
+  );
 }
 
-export default App
+export default App;

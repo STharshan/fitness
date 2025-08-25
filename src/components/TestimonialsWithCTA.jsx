@@ -1,5 +1,6 @@
 import React from 'react';
 import { FaStar } from 'react-icons/fa';
+import { useNavigate } from 'react-router-dom';
 
 const testimonials = [
   {
@@ -24,6 +25,9 @@ const testimonials = [
 ];
 
 const TestimonialsWithCTA = () => {
+
+   const navigate = useNavigate();
+
   return (
     <section className="bg-[#f9fbfc] py-20 px-4">
       <div className="max-w-7xl mx-auto text-center">
@@ -64,7 +68,9 @@ const TestimonialsWithCTA = () => {
           <p className="text-gray-600 mb-6 text-sm md:text-base">
             Experience the same results with Anthony's expert guidance and our supportive community
           </p>
-          <button className="bg-[#f15a07] text-white font-medium px-6 py-3 rounded-md hover:opacity-90 transition">
+          <button className="bg-[#f15a07] text-white font-medium px-6 py-3 rounded-md hover:opacity-90 transition"
+            onClick={() => navigate('/contact')}
+          >
             Start Your Transformation Today
           </button>
         </div>

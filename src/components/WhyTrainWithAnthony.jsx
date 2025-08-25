@@ -3,7 +3,7 @@ import { FiTarget, FiUsers, FiCheckCircle } from 'react-icons/fi';
 
 const WhyTrainWithAnthony = () => {
   return (
-    <section className="bg-[#f9fafb] py-16 px-4">
+    <section className="bg-[#f9fafb] py-16 px-4 scroll-m-10" id='benefits'>
       <div className="max-w-6xl mx-auto text-center">
 
         {/* Heading */}

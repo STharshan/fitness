@@ -18,18 +18,36 @@ const Footer = () => {
           <div>
             <h4 className="text-white font-bold text-lg mb-4">Contact Information</h4>
             <ul className="space-y-4">
-              <li className="flex items-center text-gray-300">
+              <a 
+                href="tel:+441234567890" 
+                className="flex items-center text-gray-300 hover:text-white"
+                target="_blank"
+                rel="noopener noreferrer"  
+              >
                 <FiPhone className="text-[#ef7141] mr-3" size={18} />
                 Call us for your free consultation
-              </li>
-              <li className="flex items-center text-gray-300">
+              </a>
+
+              <a 
+                href="mailto:anthonyspalding@committedfitness.co.uk" 
+                className="flex items-center text-gray-300 hover:text-white"
+                target="_blank"
+                rel="noopener noreferrer"  
+              >
                 <FiMail className="text-[#ef7141] mr-3" size={18} />
-                Email us your questions
-              </li>
-              <li className="flex items-center text-gray-300">
+                anthonyspalding@committedfitness.co.uk
+              </a>
+
+              <a
+                href="https://www.google.com/maps?q=Committed+Fitness+UK"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center text-gray-300 hover:text-white"
+              >
                 <FiMapPin className="text-[#ef7141] mr-3" size={18} />
                 Visit our training facility
-              </li>
+              </a>
+
             </ul>
           </div>
 

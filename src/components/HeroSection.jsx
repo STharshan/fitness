@@ -1,8 +1,28 @@
-// HeroSection.jsx
 import React from 'react';
 import { FiPhoneCall } from 'react-icons/fi';
+import { useNavigate, useLocation } from 'react-router-dom';
 
 const HeroSection = () => {
+  const navigate = useNavigate();
+  const location = useLocation();
+
+  const handleLearnMore = () => {
+    if (location.pathname === '/') {
+      const section = document.getElementById('training');
+      if (section) {
+        section.scrollIntoView({ behavior: 'smooth' });
+      }
+    } else {
+      navigate('/');
+      setTimeout(() => {
+        const section = document.getElementById('training');
+        if (section) {
+          section.scrollIntoView({ behavior: 'smooth' });
+        }
+      }, 100);
+    }
+  };
+
   return (
     <section className="bg-[#fef2e4] py-16 px-4 text-center">
       {/* Tag */}
@@ -23,11 +43,20 @@ const HeroSection = () => {
 
       {/* Buttons */}
       <div className="flex flex-col sm:flex-row justify-center gap-4">
-        <button className="flex items-center justify-center gap-2 bg-[#f15a07] text-white font-semibold px-6 py-3 rounded-md hover:opacity-90 transition">
+        {/* Book Free Consultation -> Contact Page */}
+        <button
+          onClick={() => navigate('/contact')}
+          className="flex items-center justify-center gap-2 bg-[#f15a07] text-white font-semibold px-6 py-3 rounded-md hover:opacity-90 transition"
+        >
           <FiPhoneCall className="text-lg" />
           Book Free Consultation
         </button>
-        <button className="border border-[#f15a07] text-[#f15a07] font-semibold px-6 py-3 rounded-md hover:bg-[#f15a0715] transition">
+
+        {/* Learn More -> Scroll to #training */}
+        <button
+          onClick={handleLearnMore}
+          className="border border-[#f15a07] text-[#f15a07] font-semibold px-6 py-3 rounded-md hover:bg-[#f15a0715] transition"
+        >
           Learn More
         </button>
       </div>

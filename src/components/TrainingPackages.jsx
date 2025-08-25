@@ -1,5 +1,6 @@
 import React from 'react';
 import { FiCheck } from 'react-icons/fi';
+import { useNavigate } from 'react-router-dom';
 
 const PackageCard = ({ title, price, subtitle, features, highlight, buttonText }) => (
   <div className={`border rounded-lg p-6 shadow-sm ${highlight ? 'border-[#ef7141]' : 'border-gray-200'}`}>
@@ -26,8 +27,11 @@ const PackageCard = ({ title, price, subtitle, features, highlight, buttonText }
 );
 
 const TrainingPackages = () => {
+
+  const navigate = useNavigate();
+  
   return (
-    <section className="bg-white text-center py-16 px-4">
+    <section className="bg-white text-center py-16 px-4 scroll-m-10" id='training'>
       {/* Section 1 – Small Group Training */}
       <h2 className="text-2xl md:text-3xl font-bold mb-2">Choose Your Training Package</h2>
       <p className="text-gray-600 max-w-xl mx-auto mb-6">
@@ -82,7 +86,9 @@ const TrainingPackages = () => {
         </span>
       </div>
 
-      <button className="mt-4 bg-[#ef7141] text-white text-sm font-semibold py-2 px-6 rounded hover:bg-[#d94a00] transition">
+      <button className="mt-4 bg-[#ef7141] text-white text-sm font-semibold py-2 px-6 rounded hover:bg-[#d94a00] transition"
+        onClick={() => navigate('/contact')}
+      >
         Book Free Consultation
       </button>
     </section>
