@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-export default function Contact () {
+export default function Contact() {
 
   const [form, setForm] = useState({
     name: "",
@@ -140,11 +140,10 @@ export default function Contact () {
               {/* Status */}
               {status.message && (
                 <div
-                  className={`mb-4 rounded-lg px-3 py-2 text-sm ${
-                    status.type === "success"
+                  className={`mb-4 rounded-lg px-3 py-2 text-sm ${status.type === "success"
                       ? "bg-green-50 text-green-700"
                       : "bg-red-50 text-red-700"
-                  }`}
+                    }`}
                   role="status"
                 >
                   {status.message}
@@ -177,15 +176,15 @@ export default function Contact () {
             <div className="mb-4 font-semibold text-gray-600">
               <p>
                 Phone :{" "}
-                <a href="tel:07936642246" className="text-gray-600 hover:underline">
-                  07936642246
+                <a href="tel:+44 7936 642246" className="hover:text-[#f15a07] text-gray-600 hover:underline">
+                  +44 7936 642246
                 </a>
               </p>
               <p>
                 Email:{" "}
                 <a
                   href="mailto:anthonyspalding@committedfitness.co.uk"
-                  className="text-gray-600 hover:underline"
+                  className="text-gray-600 hover:underline hover:text-[#f15a07]"
                 >
                   anthonyspalding@committedfitness.co.uk
                 </a>
@@ -195,13 +194,21 @@ export default function Contact () {
             <div className="mx-auto mb-6 h-px w-1/2 bg-gray-300" />
 
             <p className="mb-8 font-semibold text-gray-600">
-              Address: unit 13, Gosforth Road, Derby <br />
-              DE24 8HL
+              Address:{' '}
+              <a
+                href="https://www.google.com/maps?q=Unit+13,+Allenton,+Derby+DE24+8HL,+United+Kingdom"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:text-[#f15a07] hover:underline"
+              >
+                Unit 13, Allenton, Derby DE24 8HL, United Kingdom
+              </a>
             </p>
+
 
             <div className="mb-6 overflow-hidden rounded-xl border border-gray-200">
               <img
-                src="/contact2.png"
+                src="/logo.png"
                 alt="Group photo of business professionals"
                 className="h-auto w-full"
               />

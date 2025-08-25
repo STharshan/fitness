@@ -6,21 +6,23 @@ const testimonials = [
   {
     rating: 5,
     score: '10/10',
-    text: `I have just completed my 1st month personal training with Anthony and have managed to lose 5cm around the waist which I'm quite pleased with. Anthony is a patient coach who looks at your weaknesses and builds on them. He has a massive amount of knowledge about training, dieting and supplementation.`,
-    name: 'Ace 213',
-    subtext: 'Lost 5cm in first month',
-  },
-  {
-    rating: 5,
     text: `Training with Anthony has been an excellent experience. He is personable, knowledgeable but most important of all understanding. We set out fitness goals and thanks to Anthony's meticulous work outs and plans I am exceeding those, even after only 6 months!`,
     name: 'Matt Badat',
-    subtext: 'Exceeding goals in 6 months',
+    subtext: 'a year ago',
   },
   {
     rating: 5,
-    text: `Anthony has been so supportive throughout the past 6 months! He and the group sessions I attend really help motivate me and hit my fitness and wellness goals! Absolutely recommend to anyone wanting to improve themselves! Nice private gym means it's a safe and private environment!`,
+     score: '10/10',
+    text: `Anthony has been so supportive throughout the past 6 months! He and the group sessions I attend really help motivate me and hit my fitness and wellness goals!`,
     name: 'Matt Lewis',
-    subtext: '6 months of group training success',
+    subtext: 'a year ago',
+  },
+  {
+    rating: 5,
+     score: '10/10',
+    text: `I have been training with Committed Fitness for several years, I started with one on one sessions and then joined the group sessions. Both of which provide excellent coaching, and I have found the group sessions also build a camaraderie that help me achieve even more.`,
+    name: 'Peter Hobson',
+    subtext: 'Edited a year ago',
   },
 ];
 

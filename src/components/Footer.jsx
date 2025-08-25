@@ -19,13 +19,13 @@ const Footer = () => {
             <h4 className="text-white font-bold text-lg mb-4">Contact Information</h4>
             <ul className="space-y-4">
               <a 
-                href="tel:+441234567890" 
+                href="tel:+44 7936 642246" 
                 className="flex items-center text-gray-300 hover:text-white"
                 target="_blank"
                 rel="noopener noreferrer"  
               >
                 <FiPhone className="text-[#ef7141] mr-3" size={18} />
-                Call us for your free consultation
+                +44 7936 642246
               </a>
 
               <a 
@@ -45,7 +45,7 @@ const Footer = () => {
                 className="flex items-center text-gray-300 hover:text-white"
               >
                 <FiMapPin className="text-[#ef7141] mr-3" size={18} />
-                Visit our training facility
+                Unit 13, Allenton, Derby DE24 8HL, United Kingdom
               </a>
 
             </ul>
@@ -76,7 +76,7 @@ const Footer = () => {
         </div>
 
         {/* Footer Bottom */}
-        <div className="mt-12 border-t border-gray-800 pt-6 flex flex-col md:flex-row items-center justify-between gap-4">
+        <div className="mt-12 border-t border-gray-800 pt-6 flex flex-col md:flex-row items-center gap-10">
           {/* Logo + Brand Name */}
           <div className="flex items-center">
             <img
@@ -87,10 +87,13 @@ const Footer = () => {
           </div>
 
           {/* Copyright */}
-          <p className="text-sm text-gray-400 text-center md:text-right">
-            © 2024 Committed Fitness. All rights reserved. Transform your life with community-driven fitness.
+          <p className="text-sm text-gray-400 lg:pl-30">
+            © 2025 Committed Fitness. All rights reserved. Transform your life with community-driven fitness.
           </p>
         </div>
+          <p>
+             Powered By <a href="https://www.ansely.co.uk/" className="hover:text-orange-600 hover:underline">Ansely</a>
+          </p>
       </div>
     </footer>
   );
