@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 
 export default function Contact() {
-
   const [form, setForm] = useState({
     name: "",
     email: "",
@@ -12,24 +11,55 @@ export default function Contact() {
 
   const handleChange = (key, val) => setForm((f) => ({ ...f, [key]: val }));
 
+  // Improved phone number validation (supporting international formats)
+  const validatePhoneNumber = (phone) => {
+    const phoneRegex = /^[+]?[0-9]{1,4}?[-.\s]?[0-9]{1,4}[-.\s]?[0-9]{1,4}[-.\s]?[0-9]{1,9}$/;  // Generic international phone regex
+    return phoneRegex.test(phone);
+  };
+
+  // Improved email validation
+  const validateEmail = (email) => {
+    const emailRegex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;  // Regex for general email format
+    return emailRegex.test(email);
+  };
+
   const handleSubmit = async (e) => {
     e.preventDefault();
-    setStatus({ type: "", message: "" });
+    setStatus({ type: "", message: "" });  // Reset previous status message
 
+    // Check if all fields are filled in
     if (!form.name || !form.email || !form.phone || !form.comment) {
       setStatus({ type: "error", message: "Please fill in all required fields." });
       return;
     }
 
-    try {
-      setStatus({ type: "success", message: "Thanks! We’ll get back to you shortly." });
-      setForm({ name: "", email: "", phone: "", comment: "" });
-    } catch (err) {
-      setStatus({
-        type: "error",
-        message: "Something went wrong. Please try again.",
-      });
+    // Validate email format
+    if (!validateEmail(form.email)) {
+      setStatus({ type: "error", message: "Please enter a valid email address." });
+      return;
     }
+
+    // Validate phone number format
+    if (!validatePhoneNumber(form.phone)) {
+      setStatus({ type: "error", message: "Please enter a valid phone number." });
+      return;  // Don't proceed with form submission
+    }
+
+    // Construct message for WhatsApp
+    const message = `Name: ${form.name}\n Email: ${form.email}\n Phone: ${form.phone}\n Comment: ${form.comment}`;
+    
+    // URL encode the message
+    const encodedMessage = encodeURIComponent(message);
+    
+    // WhatsApp Click to Chat URL
+    const whatsappUrl = `https://wa.me/447936642246?text=${encodedMessage}`;  // Replace with the owner's phone number
+    
+    // Redirect user to WhatsApp
+    window.open(whatsappUrl, "_blank");
+
+    // Reset the form after submitting
+    setForm({ name: "", email: "", phone: "", comment: "" });
+    setStatus({ type: "success", message: "Thanks! We’ll get back to you shortly." });
   };
 
   return (
@@ -169,7 +199,6 @@ export default function Contact() {
           {/* Right: Contact Info */}
           <div className="flex flex-col items-center text-center">
             <h3 className="text-2xl font-bold text-black uppercase">Contact Information</h3>
-
             <div className="mx-auto my-6 h-px w-1/2 bg-gray-300" />
             <div className="mx-auto mb-6 h-px w-3/4 bg-gray-300" />
 
@@ -204,7 +233,6 @@ export default function Contact() {
                 Unit 13, Allenton, Derby DE24 8HL, United Kingdom
               </a>
             </p>
-
 
             <div className="mb-6 overflow-hidden rounded-xl border border-gray-200">
               <img
