@@ -2,13 +2,8 @@ import React from 'react';
 import { FiCheck } from 'react-icons/fi';
 import { useNavigate } from 'react-router-dom';
 
-const PackageCard = ({ title, price, subtitle, features, highlight, buttonText }) => (
+const PackageCard = ({ title, price, subtitle, features, highlight, buttonText, onClick }) => (
   <div className={`border rounded-lg p-6 shadow-sm ${highlight ? 'border-[#ef7141]' : 'border-gray-200'}`}>
-    {/* {highlight && (
-      <div className="bg-[#ef7141] text-white text-xs font-semibold px-3 py-1 rounded-t-md inline-block mb-2">
-        RECOMMENDED
-      </div>
-    )} */}
     <h3 className="text-xl font-semibold mb-2">{title}</h3>
     <p className="text-2xl font-bold text-[#ef7141]">{price}</p>
     <p className="text-sm text-gray-500 mb-4">{subtitle}</p>
@@ -20,19 +15,20 @@ const PackageCard = ({ title, price, subtitle, features, highlight, buttonText }
         </li>
       ))}
     </ul>
-    <button className="bg-[#ef7141] text-white text-sm font-semibold py-2 px-4 rounded hover:bg-[#d94a00] transition w-full">
+    <button
+      className="bg-[#d94a00] text-white text-sm font-semibold py-2 px-4 rounded hover:bg-[#ef7141] transition w-full"
+      onClick={onClick}
+    >
       {buttonText}
     </button>
   </div>
 );
 
 const TrainingPackages = () => {
-
   const navigate = useNavigate();
-  
+
   return (
-    <section className="bg-white text-center py-16 px-4 scroll-m-10" id='training'>
-      {/* Section 1 – Small Group Training */}
+    <section className="bg-white text-center py-16 px-4 scroll-m-10" id="training">
       <h2 className="text-2xl md:text-3xl font-bold mb-2">Choose Your Training Package</h2>
       <p className="text-gray-600 max-w-xl mx-auto mb-6">
         From small group sessions to personalized 1-2-1 coaching, we have the perfect package to help you achieve your fitness goals
@@ -51,33 +47,32 @@ const TrainingPackages = () => {
           price="£35 per week - £140 per month"
           features={[
             '3x 60 min sessions of coaching per week and access to our app.',
-            'Here you will have access to :',
             'Meal plans',
             'Full exercise programmes and workouts',
             'Daily habits and action goals',
             'Weekly progression check ins with your coach to ensure success',
-            'Constant access to your coach for support with any issues'
+            'Constant access to your coach for support with any issues'
           ]}
           buttonText="Choose Premium"
+          onClick={() => navigate('/contact')}  // Ensure correct navigation
         />
         <PackageCard
           title="Standard"
           price="£100 per month"
           features={[
             '2x 60 min sessions of coaching per week and access to our app.',
-            'Here you will have access to :',
             'Meal plans',
             'Full exercise programmes and workouts',
             'Daily habits and action goals',
             'Weekly progression check ins with your coach to ensure service',
-            'Constant access to your coach for support with any issues'
+            'Constant access to your coach for support with any issues'
           ]}
           highlight
           buttonText="Choose Standard"
+          onClick={() => navigate('/contact')}  // Ensure correct navigation
         />
       </div>
 
-      {/* Member Benefit Banner */}
       <div className="bg-[#d94a00] text-white text-sm font-semibold rounded-md py-4 px-6 max-w-3xl mx-auto mb-6">
         Exclusive Member Benefit <br />
         <span className="text-xs font-normal block mt-1">
@@ -86,7 +81,8 @@ const TrainingPackages = () => {
         </span>
       </div>
 
-      <button className="mt-4 bg-[#ef7141] text-white text-sm font-semibold py-2 px-6 rounded hover:bg-[#d94a00] transition"
+      <button
+        className="mt-4 bg-[#d94a00] text-white text-sm font-semibold py-2 px-6 rounded hover:bg-[#ef7141] transition"
         onClick={() => navigate('/contact')}
       >
         Book Free Consultation
