@@ -1,5 +1,6 @@
 import React from 'react';
 import { FiPhone, FiMail, FiMapPin, FiCheck } from 'react-icons/fi';
+import { Link } from 'react-router-dom';
 
 const Footer = () => {
   return (
@@ -17,22 +18,22 @@ const Footer = () => {
           {/* Contact Info */}
           <div>
             <h4 className="text-white font-bold text-lg mb-4">Contact Information</h4>
-            <ul className="space-y-4">
-              <a 
-                href="tel:+44 7936 642246" 
+            <ul className="space-y-3">
+              <a
+                href="tel:+44 7936 642246"
                 className="flex items-center text-gray-300 hover:text-white"
                 target="_blank"
-                rel="noopener noreferrer"  
+                rel="noopener noreferrer"
               >
                 <FiPhone className="text-[#ef7141] mr-3" size={18} />
                 +44 7936 642246
               </a>
 
-              <a 
-                href="mailto:anthonyspalding@committedfitness.co.uk" 
+              <a
+                href="mailto:anthonyspalding@committedfitness.co.uk"
                 className="flex items-center text-gray-300 hover:text-white"
                 target="_blank"
-                rel="noopener noreferrer"  
+                rel="noopener noreferrer"
               >
                 <FiMail className="text-[#ef7141] mr-3" size={18} />
                 anthonyspalding@committedfitness.co.uk
@@ -47,6 +48,12 @@ const Footer = () => {
                 <FiMapPin className="text-[#ef7141] mr-3" size={18} />
                 Unit 13, Allenton, Derby DE24 8HL, United Kingdom
               </a>
+              <li>
+                <Link to="/privacy-policy" className="hover:text-gray-300">Privacy Policy</Link> {/* Updated link */}
+              </li>
+              <li>
+                <Link to="/terms-conditions" className="hover:text-gray-300">Terms & Conditions</Link> {/* Updated link */}
+              </li>
 
             </ul>
           </div>
@@ -91,9 +98,9 @@ const Footer = () => {
             © 2025 Committed Fitness. All rights reserved. Transform your life with community-driven fitness.
           </p>
         </div>
-          <p>
-             Powered By <a href="https://www.ansely.co.uk/" className="hover:text-orange-600 hover:underline">Ansely</a>
-          </p>
+        <p>
+          Powered By <a href="https://www.ansely.co.uk/" className="hover:text-orange-600 hover:underline">Ansely</a>
+        </p>
       </div>
     </footer>
   );
