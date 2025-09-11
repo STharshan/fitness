@@ -77,7 +77,7 @@ const TermsConditions = () => {
           </p>
           <div className="text-gray-700">
             <p><strong>Committed Fitness</strong></p>
-            <p>Email: <a href="mailto:anthonyspalding@committedfitness.co.uk" className="text-[#ef7141]">anthonyspalding@committedfitness.co.uk</a></p>
+            <p>Email: <a href="mailto:anthonyspalding@committedfitness.co.uk" className="text-[#ef7141] hover:underline">anthonyspalding@committedfitness.co.uk</a></p>
             <p>Phone: +44 7936 642246</p>
             <p>Address: Unit 13, Allenton, Derby DE24 8HL, United Kingdom</p>
           </div>
