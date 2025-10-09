@@ -21,7 +21,7 @@ const WhyChooseTraining = () => {
   ];
 
   return (
-    <section className="bg-[#f9fbfc] py-16 px-4">
+    <section className="bg-[#f9fbfc] px-4">
       <div className="max-w-7xl mx-auto text-center">
         {/* Heading */}
         <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">

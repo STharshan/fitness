@@ -31,7 +31,7 @@ const TestimonialsWithCTA = () => {
    const navigate = useNavigate();
 
   return (
-    <section className="bg-[#f9fbfc] py-20 px-4">
+    <section className="bg-[#f9fbfc] px-4">
       <div className="max-w-7xl mx-auto text-center">
         {/* Title */}
         <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">

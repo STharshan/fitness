@@ -49,7 +49,7 @@ const GroupTraining = () => {
           </div>
 
           {/* Right Side: Key Difference */}
-          <div className="bg-[#f15a07] text-white rounded-lg px-7 py-6 w-full lg:w-1/2">
+          <div className="bg-[#f15a07] text-white mt-4 rounded-lg px-7 py-6 w-full lg:w-1/2">
             <h3 className="text-2xl font-semibold mb-4 text-left">The Key Difference</h3>
             <p className="mb-6 text-left">
               When on-site, you won't be embarking on your journey to a better you all by yourself.
