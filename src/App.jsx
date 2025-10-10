@@ -7,6 +7,7 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import ScrollToTop from './components/ScrollToTop';
 import TermsConditions from './components/Term';
 import PrivacyPolicy from './components/PrivacyPolicy';
+import GDPRConsent from './components/GDPRButton';
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
         <Route path="/privacy-policy" element={<PrivacyPolicy />} />
       </Routes>
       <Footer />
+      <GDPRConsent />
     </Router>
   );
 }
