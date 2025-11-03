@@ -24,9 +24,9 @@ const HeroSection = () => {
   };
 
   return (
-    <section className="bg-[#fef2e4] py-16 px-4 text-center">
+    <section className="bg-[#fef2e4] h-[100vh] py-16 px-4 text-center">
       {/* Tag */}
-      <div className="inline-block bg-[#f15a07] text-white text-sm font-semibold px-4 py-2 rounded-full mb-4 mt-20">
+      <div className="inline-block bg-[#f15a07] text-white text-sm font-semibold px-4 py-2 rounded-full mb-4 mt-25">
         Small Group Training
       </div>
 
