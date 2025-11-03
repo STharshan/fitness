@@ -19,7 +19,7 @@ const JoinCommunity = () => {
         </p>
 
         {/* Orange CTA Box */}
-        <div className="bg-gradient-to-r from-[#db4a00] to-[#c64200] rounded-xl px-6 py-10 text-white">
+        <div className="bg-linear-to-r from-[#db4a00] to-[#c64200] rounded-xl px-6 py-10 text-white">
           <h3 className="text-xl md:text-2xl font-bold mb-4">
             Ready to See Results for Yourself?
           </h3>
