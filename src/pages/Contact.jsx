@@ -190,8 +190,9 @@ export default function Contact() {
                   Submit
                 </button>
                 <p className="text-xs text-gray-500">
-                  By submitting, you agree to be contacted about your enquiry.
+                   <p className="text-xs text-center dark:text-gray-300">By submitting this form, you agree to us processing your details to respond to your enquiry. Your information is handled securely and in line with our Privacy Policy.</p>
                 </p>
+
               </div>
             </form>
           </div>
