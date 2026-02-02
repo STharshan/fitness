@@ -98,9 +98,9 @@ const Footer = () => {
             © 2025 Committed Fitness. All rights reserved. Transform your life with community-driven fitness.
           </p>
         </div>
-        <p>
+        {/* <p>
           Powered By <a href="https://www.ansely.co.uk/" className="hover:text-orange-600 hover:underline">Ansely</a>
-        </p>
+        </p> */}
       </div>
     </footer>
   );
